@@ -29,6 +29,3 @@ Example: 0:0:0:0:0:0:0:0
 ```
 ## Contributing
 Bug reports are welcome
-
-## License
-The bot is available as open source under the terms of the Apache License, Version 2.0
