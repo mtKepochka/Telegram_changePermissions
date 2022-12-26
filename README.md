@@ -1,4 +1,6 @@
 # Telegram_changePermissions
+![python](https://img.shields.io/pypi/pyversions/python-telegram-bot?color=orange)
+![license](https://camo.githubusercontent.com/cfe69e600955e54ca39acc7f06520fa5fc555b9c201b15536580b7cb4670c8a3/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f636c7562686f7573652d6170693f636f6c6f723d626c756576696f6c6574)
 
 **Telegram_changePermissions** - bot that can change permissions for your group in Telegram
 ## **Instalation**
