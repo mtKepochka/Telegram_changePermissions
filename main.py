@@ -27,17 +27,22 @@ def change_permissions(message):
     if message.content_type == 'text':
         value = message.text
         value = value.split(":")
+        if len(value) != 8:
+            bot.reply_to(message, 'Something went wrong, please check input string')
         perms = telegram.ChatPermissions()
-        perms.can_send_messages = bool(int(value[0]))
-        perms.can_send_media_messages = bool(int(value[0]))
-        perms.can_send_polls = bool(int(value[0]))
-        perms.can_send_other_messages = bool(int(value[0]))
-        perms.can_add_web_page_previews = bool(int(value[0]))
-        perms.can_change_info = bool(int(value[0]))
-        perms.can_invite_users = bool(int(value[0]))
-        perms.can_pin_messages = bool(int(value[0]))
-        bot.set_chat_permissions(message.chat.id, permissions=a)
-        bot.send_message(message.chat.id, "✅Done")
+        try:
+            perms.can_send_messages = bool(int(value[0]))
+            perms.can_send_media_messages = bool(int(value[1]))
+            perms.can_send_polls = bool(int(value[2]))
+            perms.can_send_other_messages = bool(int(value[3]))
+            perms.can_add_web_page_previews = bool(int(value[4]))
+            perms.can_change_info = bool(int(value[5]))
+            perms.can_invite_users = bool(int(value[6]))
+            perms.can_pin_messages = bool(int(value[7]))
+            bot.set_chat_permissions(message.chat.id, permissions=a)
+            bot.send_message(message.chat.id, "✅Done")
+        except:
+            bot.reply_to(message, 'Something went wrong, please check input string')
     else:
         bot.reply_to(message, '❌Wrong values')
 
