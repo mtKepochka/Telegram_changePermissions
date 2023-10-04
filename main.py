@@ -39,7 +39,7 @@ def change_permissions(message):
             perms.can_change_info = bool(int(value[5]))
             perms.can_invite_users = bool(int(value[6]))
             perms.can_pin_messages = bool(int(value[7]))
-            bot.set_chat_permissions(message.chat.id, permissions=a)
+            bot.set_chat_permissions(message.chat.id, permissions=perms)
             bot.send_message(message.chat.id, "✅Done")
         except:
             bot.reply_to(message, 'Something went wrong, please check input string')
